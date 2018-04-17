@@ -184,8 +184,8 @@ Otherwise do nothing."
   ;; when stored in the archive-contents
   (let ((time (date-to-time
                (if (string-match "\
-^\\([0-9]\\{4\\}\\)/\\([0-9]\\{2\\}\\)/\\([0-9]\\{2\\}\\) \
-\\([0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\}\\)$" str)
+^\\([0-9]\\{4\\}\\)-\\([0-9]\\{2\\}\\)-\\([0-9]\\{2\\}\\) \
+\\([0-9]\\{2\\}:[0-9]\\{2\\}:[0-9]\\{2\\}\\) \\(\\+\\|-\\)[0-9]\\{4\\}$" str)
                    (concat (match-string 1 str) "-" (match-string 2 str) "-"
                            (match-string 3 str) " " (match-string 4 str))
                  str))))
